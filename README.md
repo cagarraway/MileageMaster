@@ -1,5 +1,5 @@
 # MileageMaster
-This simple project, functionally, is about simply recording the mileage of my family's vehicles, and viewing their significant statistics.
+This simple project, functionally, is about simply recording the mileage of my family's vehicles, and viewing their significant statistics. The documentation of the requirements will be comprised of issues with the #requirements tag.
 
 Objectively, the project has several goals:
 1. I actually want such an application. I've been recording the mileages in an Excel file, but navigating that on a phone is inconvenient, so I thought I'd build an app.
