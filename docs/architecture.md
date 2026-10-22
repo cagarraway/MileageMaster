@@ -62,11 +62,11 @@ rules such as "not in the future" use the users' calendar day.
 
 ## Testing
 
-| Kind                    | Tool       | Location                     | Needs DB |
-| ----------------------- | ---------- | ---------------------------- | -------- |
-| Domain rules            | Vitest     | `src/lib/**/*.spec.ts`       | No       |
-| Repositories            | Vitest     | `src/lib/server/**/*.spec.ts` | Yes      |
-| UI / end-to-end         | Playwright | `e2e/*.e2e.ts`               | Yes      |
+| Kind            | Tool       | Location                      | Needs DB |
+| --------------- | ---------- | ----------------------------- | -------- |
+| Domain rules    | Vitest     | `src/lib/**/*.spec.ts`        | No       |
+| Repositories    | Vitest     | `src/lib/server/**/*.spec.ts` | Yes      |
+| UI / end-to-end | Playwright | `e2e/*.e2e.ts`                | Yes      |
 
 Tests that need a database use `mileagemaster_test`, which the Docker setup creates alongside
 the development database.
