@@ -1,0 +1,25 @@
+# Local development database. Start with `npm run db:up`.
+# Creates `mileagemaster` (dev) and `mileagemaster_test` (tests) databases.
+services:
+  db:
+    image: mysql:8.0
+    container_name: mileagemaster-db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mileagemaster
+      MYSQL_USER: mileagemaster
+      MYSQL_PASSWORD: mileagemaster
+    ports:
+      - '3306:3306'
+    volumes:
+      - db-data:/var/lib/mysql
+      - ./docker/mysql-init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ['CMD', 'mysqladmin', 'ping', '-h', 'localhost', '-uroot', '-proot']
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+volumes:
+  db-data:
