@@ -1,0 +1,22 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+
+/* Brand palette: a businesslike green. Use `brand-*` classes rather than `emerald-*`
+   so the theme can be retuned in one place. */
+@theme inline {
+	--color-brand-50: var(--color-emerald-50);
+	--color-brand-100: var(--color-emerald-100);
+	--color-brand-200: var(--color-emerald-200);
+	--color-brand-300: var(--color-emerald-300);
+	--color-brand-500: var(--color-emerald-500);
+	--color-brand-600: var(--color-emerald-600);
+	--color-brand-700: var(--color-emerald-700);
+	--color-brand-800: var(--color-emerald-800);
+	--color-brand-900: var(--color-emerald-900);
+}
+
+@layer base {
+	body {
+		@apply bg-slate-50 text-slate-800 antialiased;
+	}
+}
